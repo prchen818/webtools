@@ -1,30 +1,48 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import QRConvert from './components/QRConvert.vue'
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="titlebar">
+    <h3 class="title">PeiFang's Tools</h3>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <div class="mainbody">
+    <ElMenu class="menu">
+      <ElMenuItem index="0">二维码转换</ElMenuItem>
+      <ElMenuItem index="1">未完待续</ElMenuItem>
+    </ElMenu>
+    <div class="main">
+      <QRConvert></QRConvert>
+    </div>
+  </div>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.titlebar {
+  height: 6vh;
+  position: sticky;
+  top: 0%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(73, 177, 245, 0.85);
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.title {
+  margin: 10px;
+  margin-left: 30px;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.mainbody {
+  height: 94vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.main {
+  flex: 1;
+}
+
+.menu {
+  height: 100%;
 }
 </style>
